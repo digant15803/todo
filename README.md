@@ -192,5 +192,5 @@ This avoids race conditions since HTTP handlers in Go run concurrently.
 
 ---
 
-- Generative AI was used responsibly as a development aid.
+- Generative AI was used **responsibly** as a development aid.
 
