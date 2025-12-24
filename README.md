@@ -65,7 +65,7 @@ GET /todos/
 
 ### ✅ Mark TODO as Completed
 ```
-PUT /todos/{id}/complete
+POST /todos/{id}/complete
 ```
 
 - No request body required
@@ -123,6 +123,48 @@ http://localhost:8080
 
 ---
 
+## 🔧 Example API Usage (Using `curl`)
+
+Ensure the server is running before executing these commands.
+
+### Create a TODO
+```bash
+curl -X POST http://localhost:8080/todos \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Buy groceries"}'
+```
+
+---
+
+### List All TODOs
+```bash
+curl http://localhost:8080/todos
+```
+
+---
+
+### Mark a TODO as Completed
+```bash
+curl -X POST http://localhost:8080/todos/<id>/complete
+```
+
+Replace `<id>` with the ID of the TODO item.
+
+---
+
+### Delete a TODO
+```bash
+curl -X DELETE http://localhost:8080/todos/<id>
+```
+
+---
+
+### 🧪 Testing with Postman (Optional)
+
+You can also test the API using Postman by creating requests for the same endpoints listed above.
+
+---
+
 ## 🧪 Running Tests
 
 ```bash
@@ -142,9 +184,13 @@ This avoids race conditions since HTTP handlers in Go run concurrently.
 
 ---
 
-## 📌 Assumptions
+## 📌 Assumptions & Notes
 
 - No authentication
 - Use of library to generate UUID (id) for any todo Task
 - Completed TODOs cannot be reverted
+
+---
+
+- Generative AI was used responsibly as a development aid.
 
