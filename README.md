@@ -36,7 +36,7 @@ POST /todos/
 **Response**
 ```json
 {
-  "id": "uuid",
+  "id": {"uuid"},
   "title": "Buy groceries",
   "completed": false
 }
@@ -54,7 +54,7 @@ GET /todos/
 ```json
 [
   {
-    "id": "uuid",
+    "id": {"uuid"},
     "title": "Buy groceries",
     "completed": false
   }
