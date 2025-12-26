@@ -7,7 +7,7 @@ import (
 	"errors"
 	// "fmt"
 
-	"todo/internal/todo-api"
+	"todo/internal/todo"
 )
 
 type Handler struct {

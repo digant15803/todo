@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	httpHandler "todo/internal/http"
-	todo "todo/internal/todo-api"
+	todo "todo/internal/todo"
 )
 
 func main() {
